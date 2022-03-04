@@ -85,49 +85,49 @@ namespace Bartholomew.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string bPort {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int bFTPPort {
             get {
-                return ((string)(this["bPort"]));
+                return ((int)(this["bFTPPort"]));
             }
             set {
-                this["bPort"] = value;
+                this["bFTPPort"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string bHost {
+        public string bFTPHost {
             get {
-                return ((string)(this["bHost"]));
+                return ((string)(this["bFTPHost"]));
             }
             set {
-                this["bHost"] = value;
+                this["bFTPHost"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string bUsername {
+        public string bFTPUsername {
             get {
-                return ((string)(this["bUsername"]));
+                return ((string)(this["bFTPUsername"]));
             }
             set {
-                this["bUsername"] = value;
+                this["bFTPUsername"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string bPassword {
+        public string bFTPPassword {
             get {
-                return ((string)(this["bPassword"]));
+                return ((string)(this["bFTPPassword"]));
             }
             set {
-                this["bPassword"] = value;
+                this["bFTPPassword"] = value;
             }
         }
         
@@ -152,6 +152,150 @@ namespace Bartholomew.Properties {
             }
             set {
                 this["bSavedBox"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bFTPAdult {
+            get {
+                return ((string)(this["bFTPAdult"]));
+            }
+            set {
+                this["bFTPAdult"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bFTPChild {
+            get {
+                return ((string)(this["bFTPChild"]));
+            }
+            set {
+                this["bFTPChild"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bFTPFamily {
+            get {
+                return ((string)(this["bFTPFamily"]));
+            }
+            set {
+                this["bFTPFamily"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bBackupLocation {
+            get {
+                return ((string)(this["bBackupLocation"]));
+            }
+            set {
+                this["bBackupLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bFTPFolder {
+            get {
+                return ((string)(this["bFTPFolder"]));
+            }
+            set {
+                this["bFTPFolder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1111")]
+        public string bPin {
+            get {
+                return ((string)(this["bPin"]));
+            }
+            set {
+                this["bPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\ashcr")]
+        public string bLocalFolder {
+            get {
+                return ((string)(this["bLocalFolder"]));
+            }
+            set {
+                this["bLocalFolder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bSavedLocationFTP {
+            get {
+                return ((string)(this["bSavedLocationFTP"]));
+            }
+            set {
+                this["bSavedLocationFTP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int bSavedType {
+            get {
+                return ((int)(this["bSavedType"]));
+            }
+            set {
+                this["bSavedType"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bSavedLocationLocal {
+            get {
+                return ((string)(this["bSavedLocationLocal"]));
+            }
+            set {
+                this["bSavedLocationLocal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(",,,,,,,")]
+        public string bBackupLocations {
+            get {
+                return ((string)(this["bBackupLocations"]));
+            }
+            set {
+                this["bBackupLocations"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int bQuestionChoice {
+            get {
+                return ((int)(this["bQuestionChoice"]));
+            }
+            set {
+                this["bQuestionChoice"] = value;
             }
         }
     }
