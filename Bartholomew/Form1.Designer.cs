@@ -65,6 +65,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmdDownloadBackup = new System.Windows.Forms.Button();
+            this.cmdCheckPassword = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtFTPChild = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtFTPAdult = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtFTPFamily = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.cmdBackupBrowse = new System.Windows.Forms.Button();
+            this.txtBackup = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtFTPFolder = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbSaved.SuspendLayout();
@@ -72,16 +87,17 @@
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(8, 8);
+            this.tabControl1.Location = new System.Drawing.Point(-6, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(986, 565);
+            this.tabControl1.Size = new System.Drawing.Size(1216, 573);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -100,14 +116,14 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(978, 539);
+            this.tabPage1.Size = new System.Drawing.Size(1208, 547);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // gbHidden
             // 
-            this.gbHidden.Location = new System.Drawing.Point(562, 149);
+            this.gbHidden.Location = new System.Drawing.Point(784, 49);
             this.gbHidden.Name = "gbHidden";
             this.gbHidden.Size = new System.Drawing.Size(409, 374);
             this.gbHidden.TabIndex = 13;
@@ -115,9 +131,9 @@
             // 
             // gbInfo
             // 
-            this.gbInfo.Location = new System.Drawing.Point(20, 140);
+            this.gbInfo.Location = new System.Drawing.Point(6, 49);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Size = new System.Drawing.Size(526, 384);
+            this.gbInfo.Size = new System.Drawing.Size(772, 492);
             this.gbInfo.TabIndex = 12;
             this.gbInfo.TabStop = false;
             // 
@@ -126,9 +142,9 @@
             this.gbSaved.Controls.Add(this.cmdSaved);
             this.gbSaved.Controls.Add(this.cboSaved);
             this.gbSaved.Controls.Add(this.label3);
-            this.gbSaved.Location = new System.Drawing.Point(540, 49);
+            this.gbSaved.Location = new System.Drawing.Point(568, -15);
             this.gbSaved.Name = "gbSaved";
-            this.gbSaved.Size = new System.Drawing.Size(432, 65);
+            this.gbSaved.Size = new System.Drawing.Size(432, 58);
             this.gbSaved.TabIndex = 11;
             this.gbSaved.TabStop = false;
             // 
@@ -164,9 +180,9 @@
             // cmdHidden
             // 
             this.cmdHidden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdHidden.Location = new System.Drawing.Point(769, 6);
+            this.cmdHidden.Location = new System.Drawing.Point(1014, 6);
             this.cmdHidden.Name = "cmdHidden";
-            this.cmdHidden.Size = new System.Drawing.Size(203, 34);
+            this.cmdHidden.Size = new System.Drawing.Size(188, 34);
             this.cmdHidden.TabIndex = 7;
             this.cmdHidden.Text = "Show Hidden Info";
             this.cmdHidden.UseVisualStyleBackColor = true;
@@ -175,12 +191,13 @@
             // cmdSubmit
             // 
             this.cmdSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSubmit.Location = new System.Drawing.Point(466, 9);
+            this.cmdSubmit.Location = new System.Drawing.Point(455, 9);
             this.cmdSubmit.Name = "cmdSubmit";
             this.cmdSubmit.Size = new System.Drawing.Size(102, 34);
             this.cmdSubmit.TabIndex = 6;
             this.cmdSubmit.Text = "Submit";
             this.cmdSubmit.UseVisualStyleBackColor = true;
+            this.cmdSubmit.Click += new System.EventHandler(this.cmdSubmit_Click);
             // 
             // cboYear
             // 
@@ -214,7 +231,7 @@
             // 
             this.cboTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTime.FormattingEnabled = true;
-            this.cboTime.Location = new System.Drawing.Point(318, 9);
+            this.cboTime.Location = new System.Drawing.Point(307, 9);
             this.cboTime.Name = "cboTime";
             this.cboTime.Size = new System.Drawing.Size(142, 33);
             this.cboTime.TabIndex = 2;
@@ -240,6 +257,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.cmdCheckPassword);
+            this.tabPage2.Controls.Add(this.cmdDownloadBackup);
             this.tabPage2.Controls.Add(this.tabControl2);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.button1);
@@ -255,6 +275,7 @@
             // 
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Location = new System.Drawing.Point(193, 103);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -329,6 +350,14 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.txtFTPFolder);
+            this.tabPage4.Controls.Add(this.label13);
+            this.tabPage4.Controls.Add(this.txtFTPFamily);
+            this.tabPage4.Controls.Add(this.label11);
+            this.tabPage4.Controls.Add(this.txtFTPAdult);
+            this.tabPage4.Controls.Add(this.label10);
+            this.tabPage4.Controls.Add(this.txtFTPChild);
+            this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.txtPassword);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.txtUsername);
@@ -350,7 +379,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(124, 164);
+            this.txtPassword.Location = new System.Drawing.Point(112, 145);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(225, 31);
             this.txtPassword.TabIndex = 22;
@@ -359,7 +388,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(18, 164);
+            this.label8.Location = new System.Drawing.Point(6, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 25);
             this.label8.TabIndex = 21;
@@ -368,7 +397,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(124, 116);
+            this.txtUsername.Location = new System.Drawing.Point(112, 97);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(225, 31);
             this.txtUsername.TabIndex = 20;
@@ -377,7 +406,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 116);
+            this.label7.Location = new System.Drawing.Point(6, 97);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 25);
             this.label7.TabIndex = 19;
@@ -386,7 +415,7 @@
             // txtPort
             // 
             this.txtPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPort.Location = new System.Drawing.Point(124, 69);
+            this.txtPort.Location = new System.Drawing.Point(112, 50);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(225, 31);
             this.txtPort.TabIndex = 18;
@@ -395,7 +424,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 69);
+            this.label6.Location = new System.Drawing.Point(6, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 25);
             this.label6.TabIndex = 17;
@@ -415,7 +444,7 @@
             // txtHost
             // 
             this.txtHost.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHost.Location = new System.Drawing.Point(124, 25);
+            this.txtHost.Location = new System.Drawing.Point(112, 6);
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(225, 31);
             this.txtHost.TabIndex = 14;
@@ -429,12 +458,13 @@
             this.cmdFTPSave.TabIndex = 13;
             this.cmdFTPSave.Text = "Save";
             this.cmdFTPSave.UseVisualStyleBackColor = true;
+            this.cmdFTPSave.Click += new System.EventHandler(this.cmdFTPSave_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 25);
+            this.label5.Location = new System.Drawing.Point(6, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 12;
@@ -457,11 +487,149 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // cmdDownloadBackup
+            // 
+            this.cmdDownloadBackup.Location = new System.Drawing.Point(32, 163);
+            this.cmdDownloadBackup.Name = "cmdDownloadBackup";
+            this.cmdDownloadBackup.Size = new System.Drawing.Size(117, 43);
+            this.cmdDownloadBackup.TabIndex = 3;
+            this.cmdDownloadBackup.Text = "Download Bookings for Today";
+            this.cmdDownloadBackup.UseVisualStyleBackColor = true;
+            this.cmdDownloadBackup.Click += new System.EventHandler(this.cmdDownloadBackup_Click);
+            // 
+            // cmdCheckPassword
+            // 
+            this.cmdCheckPassword.Location = new System.Drawing.Point(846, 29);
+            this.cmdCheckPassword.Name = "cmdCheckPassword";
+            this.cmdCheckPassword.Size = new System.Drawing.Size(101, 36);
+            this.cmdCheckPassword.TabIndex = 4;
+            this.cmdCheckPassword.Text = "button2";
+            this.cmdCheckPassword.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(610, 32);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(214, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // txtFTPChild
+            // 
+            this.txtFTPChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFTPChild.Location = new System.Drawing.Point(477, 19);
+            this.txtFTPChild.Name = "txtFTPChild";
+            this.txtFTPChild.Size = new System.Drawing.Size(198, 31);
+            this.txtFTPChild.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(343, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 25);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Child Folder";
+            // 
+            // txtFTPAdult
+            // 
+            this.txtFTPAdult.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFTPAdult.Location = new System.Drawing.Point(477, 60);
+            this.txtFTPAdult.Name = "txtFTPAdult";
+            this.txtFTPAdult.Size = new System.Drawing.Size(198, 31);
+            this.txtFTPAdult.TabIndex = 27;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(343, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(128, 25);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Adult Folder";
+            // 
+            // txtFTPFamily
+            // 
+            this.txtFTPFamily.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFTPFamily.Location = new System.Drawing.Point(477, 97);
+            this.txtFTPFamily.Name = "txtFTPFamily";
+            this.txtFTPFamily.Size = new System.Drawing.Size(198, 31);
+            this.txtFTPFamily.TabIndex = 30;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(343, 100);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(142, 25);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Family Folder";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.cmdBackupBrowse);
+            this.tabPage5.Controls.Add(this.txtBackup);
+            this.tabPage5.Controls.Add(this.label12);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(774, 384);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Backup Folder";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // cmdBackupBrowse
+            // 
+            this.cmdBackupBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBackupBrowse.Location = new System.Drawing.Point(429, 34);
+            this.cmdBackupBrowse.Name = "cmdBackupBrowse";
+            this.cmdBackupBrowse.Size = new System.Drawing.Size(87, 34);
+            this.cmdBackupBrowse.TabIndex = 34;
+            this.cmdBackupBrowse.Text = "Browse";
+            this.cmdBackupBrowse.UseVisualStyleBackColor = true;
+            // 
+            // txtBackup
+            // 
+            this.txtBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBackup.Location = new System.Drawing.Point(183, 32);
+            this.txtBackup.Name = "txtBackup";
+            this.txtBackup.Size = new System.Drawing.Size(240, 31);
+            this.txtBackup.TabIndex = 33;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(26, 38);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(151, 25);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Backup Folder";
+            // 
+            // txtFTPFolder
+            // 
+            this.txtFTPFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFTPFolder.Location = new System.Drawing.Point(477, 167);
+            this.txtFTPFolder.Name = "txtFTPFolder";
+            this.txtFTPFolder.Size = new System.Drawing.Size(198, 31);
+            this.txtFTPFolder.TabIndex = 32;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(343, 170);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(119, 25);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "FTP Folder";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 576);
+            this.ClientSize = new System.Drawing.Size(1203, 576);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -478,6 +646,8 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -522,6 +692,21 @@
         private System.Windows.Forms.TextBox txtHost;
         private System.Windows.Forms.Button cmdFTPSave;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button cmdDownloadBackup;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button cmdCheckPassword;
+        private System.Windows.Forms.TextBox txtFTPFamily;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtFTPAdult;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtFTPChild;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button cmdBackupBrowse;
+        private System.Windows.Forms.TextBox txtBackup;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtFTPFolder;
+        private System.Windows.Forms.Label label13;
 =======
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
